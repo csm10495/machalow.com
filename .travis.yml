@@ -1,10 +1,8 @@
 services:
 - docker
-
 language: python
 python:
 - '2.7'
-
 deploy:
   provider: gae
   keyfile: machalowcom-194568518c1e.json.enc
@@ -12,14 +10,12 @@ deploy:
   verbosity: debug
   on: master
   default: true
-
 notifications:
   email:
     on_success: never
     on_failure: always
-    
 script:
 - ls
-
 before_install:
-- openssl aes-256-cbc -K $encrypted_f0192677bce7_key -iv $encrypted_f0192677bce7_iv -in machalowcom-194568518c1e.json.enc -out machalowcom-194568518c1e.json -d
+- openssl aes-256-cbc -K $encrypted_f0192677bce7_key -iv $encrypted_f0192677bce7_iv
+  -in machalowcom-194568518c1e.json.enc -out machalowcom-194568518c1e.json -d
