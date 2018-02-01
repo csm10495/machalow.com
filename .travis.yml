@@ -5,7 +5,7 @@ python:
 - '2.7'
 deploy:
   provider: gae
-  keyfile: machalowcom-194568518c1e.json.enc
+  keyfile: machalowcom-194568518c1e.json
   project: machalowcom
   verbosity: debug
   on: master
