@@ -20,11 +20,6 @@ handlers:
   secure: always
   redirect_http_response_code: 301  
   
-# Handle all py files
-- url: /(.+.py)
-  secure: always
-  redirect_http_response_code: 301
-  
 # Handle nearly every other file by just serving it.
 - url: /(.+)
   static_files: www/\1
