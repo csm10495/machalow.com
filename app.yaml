@@ -1,6 +1,5 @@
 runtime: php72
 api_version: 1
-threadsafe: true
 
 handlers:
 - url: /$
