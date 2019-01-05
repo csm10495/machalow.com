@@ -44,9 +44,22 @@ class RSS(object):
         return URL_PREFIX + foundUrl
 
 
-if __name__ == '__main__':
-    rss = RSS()
-    print (rss.getRssXmlWithImages())
+rss = RSS()
+xml = rss.getRssXmlWithImages()
+try:
+    import webapp2
+except ImportError:
+    print ("Cannot use webapp2")
+else:
+    class MainPage(webapp2.RequestHandler):
+        def get(self):
+            self.response.headers['Content-Type'] = 'text/plain'
+            self.response.write(xml)
+            
+    app = webapp2.WSGIApplication([
+        ('/', MainPage),
+    ], debug=True)
+    
 
 
 
