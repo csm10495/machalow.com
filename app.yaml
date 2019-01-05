@@ -21,7 +21,7 @@ handlers:
   redirect_http_response_code: 301  
 
 # HF test fun  
-- url: /charlie/hfqdb_rss/
+- url: /charlie/hfqdb_rss/.*
   script: auto
 
 # Handle nearly every other file by just serving it.
