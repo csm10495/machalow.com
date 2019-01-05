@@ -16,7 +16,7 @@ handlers:
   
 # Handle all php files
 - url: /(.+.php)
-  script: www/\1
+  script: auto
   secure: always
   redirect_http_response_code: 301
   
