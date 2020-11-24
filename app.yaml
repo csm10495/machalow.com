@@ -6,6 +6,7 @@ handlers:
 - url: /(.*)/?$
   static_files: www/\1/index.html
   upload: www/.*/index.html
+  secure: always
 
 # Handle nearly every other file by just serving it.
 - url: /(.+)
