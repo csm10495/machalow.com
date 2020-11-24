@@ -156,12 +156,12 @@ handlers:
   static_files: www/\1
   upload: www/(.*\.(bz2|gz|rar|tar|tgz|zip))
 
-# index files
-- url: /(.*)/?
-  static_files: www/\1/index.html
-  upload: www/(.*)/index.html
-
 # site root
 - url: /
   static_files: www/index.html
   upload: www/index.html
+
+# index files
+- url: /(.*)/?
+  static_files: www/\1/index.html
+  upload: www/(.*)/index.html
