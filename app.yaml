@@ -1,6 +1,12 @@
 runtime: python37
 
 handlers:
+
+# Handle folder urls by serving the index.html page inside.
+- url: /(.*)/?$
+  static_files: www/\1/index.html
+  upload: www/.*/index.html
+
 # Handle nearly every other file by just serving it.
 - url: /(.+)
   static_files: www/\1
