@@ -1,167 +1,171 @@
+version: 1
 runtime: python37
+api_version: 1
+
+default_expiration: "30d"
 
 handlers:
 - url: /(.*\.(appcache|manifest))
   mime_type: text/cache-manifest
-  static_files: static/\1
-  upload: static/(.*\.(appcache|manifest))
+  static_files: www/\1
+  upload: www/(.*\.(appcache|manifest))
 
 - url: /(.*\.atom)
   mime_type: application/atom+xml
-  static_files: static/\1
-  upload: static/(.*\.atom)
+  static_files: www/\1
+  upload: www/(.*\.atom)
 
 - url: /(.*\.crx)
   mime_type: application/x-chrome-extension
-  static_files: static/\1
-  upload: static/(.*\.crx)
+  static_files: www/\1
+  upload: www/(.*\.crx)
 
 - url: /(.*\.css)
   mime_type: text/css
-  static_files: static/\1
-  upload: static/(.*\.css)
+  static_files: www/\1
+  upload: www/(.*\.css)
 
 - url: /(.*\.eot)
   mime_type: application/vnd.ms-fontobject
-  static_files: static/\1
-  upload: static/(.*\.eot)
+  static_files: www/\1
+  upload: www/(.*\.eot)
 
 - url: /(.*\.htc)
   mime_type: text/x-component
-  static_files: static/\1
-  upload: static/(.*\.htc)
+  static_files: www/\1
+  upload: www/(.*\.htc)
 
 - url: /(.*\.html)
   mime_type: text/html
-  static_files: static/\1
-  upload: static/(.*\.html)
+  static_files: www/\1
+  upload: www/(.*\.html)
 
 - url: /(.*\.ico)
   mime_type: image/x-icon
-  static_files: static/\1
-  upload: static/(.*\.ico)
+  static_files: www/\1
+  upload: www/(.*\.ico)
 
 - url: /(.*\.js)
   mime_type: text/javascript
-  static_files: static/\1
-  upload: static/(.*\.js)
+  static_files: www/\1
+  upload: www/(.*\.js)
 
 - url: /(.*\.json)
   mime_type: application/json
-  static_files: static/\1
-  upload: static/(.*\.json)
+  static_files: www/\1
+  upload: www/(.*\.json)
 
 - url: /(.*\.m4v)
   mime_type: video/m4v
-  static_files: static/\1
-  upload: static/(.*\.m4v)
+  static_files: www/\1
+  upload: www/(.*\.m4v)
 
 - url: /(.*\.mp4)
   mime_type: video/mp4
-  static_files: static/\1
-  upload: static/(.*\.mp4)
+  static_files: www/\1
+  upload: www/(.*\.mp4)
 
 - url: /(.*\.(ogg|oga))
   mime_type: audio/ogg
-  static_files: static/\1
-  upload: static/(.*\.(ogg|oga))
+  static_files: www/\1
+  upload: www/(.*\.(ogg|oga))
 
 - url: /(.*\.ogv)
   mime_type: video/ogg
-  static_files: static/\1
-  upload: static/(.*\.ogv)
+  static_files: www/\1
+  upload: www/(.*\.ogv)
 
 - url: /(.*\.otf)
   mime_type: font/opentype
-  static_files: static/\1
-  upload: static/(.*\.otf)
+  static_files: www/\1
+  upload: www/(.*\.otf)
 
 - url: /(.*\.rss)
   mime_type: application/rss+xml
-  static_files: static/\1
-  upload: static/(.*\.rss)
+  static_files: www/\1
+  upload: www/(.*\.rss)
 
 - url: /(.*\.safariextz)
   mime_type: application/octet-stream
-  static_files: static/\1
-  upload: static/(.*\.safariextz)
+  static_files: www/\1
+  upload: www/(.*\.safariextz)
 
 - url: /(.*\.(svg|svgz))
   mime_type: images/svg+xml
-  static_files: static/\1
-  upload: static/(.*\.(svg|svgz))
+  static_files: www/\1
+  upload: www/(.*\.(svg|svgz))
 
 - url: /(.*\.swf)
   mime_type: application/x-shockwave-flash
-  static_files: static/\1
-  upload: static/(.*\.swf)
+  static_files: www/\1
+  upload: www/(.*\.swf)
 
 - url: /(.*\.ttf)
   mime_type: font/truetype
-  static_files: static/\1
-  upload: static/(.*\.ttf)
+  static_files: www/\1
+  upload: www/(.*\.ttf)
 
 - url: /(.*\.txt)
   mime_type: text/plain
-  static_files: static/\1
-  upload: static/(.*\.txt)
+  static_files: www/\1
+  upload: www/(.*\.txt)
 
 - url: /(.*\.unity3d)
   mime_type: application/vnd.unity
-  static_files: static/\1
-  upload: static/(.*\.unity3d)
+  static_files: www/\1
+  upload: www/(.*\.unity3d)
 
 - url: /(.*\.webm)
   mime_type: video/webm
-  static_files: static/\1
-  upload: static/(.*\.webm)
+  static_files: www/\1
+  upload: www/(.*\.webm)
 
 - url: /(.*\.webp)
   mime_type: image/webp
-  static_files: static/\1
-  upload: static/(.*\.webp)
+  static_files: www/\1
+  upload: www/(.*\.webp)
 
 - url: /(.*\.woff)
   mime_type: application/x-font-woff
-  static_files: static/\1
-  upload: static/(.*\.woff)
+  static_files: www/\1
+  upload: www/(.*\.woff)
 
 - url: /(.*\.xml)
   mime_type: application/xml
-  static_files: static/\1
-  upload: static/(.*\.xml)
+  static_files: www/\1
+  upload: www/(.*\.xml)
 
 - url: /(.*\.xpi)
   mime_type: application/x-xpinstall
-  static_files: static/\1
-  upload: static/(.*\.xpi)
+  static_files: www/\1
+  upload: www/(.*\.xpi)
 
 # image files
 - url: /(.*\.(bmp|gif|ico|jpeg|jpg|png))
-  static_files: static/\1
-  upload: static/(.*\.(bmp|gif|ico|jpeg|jpg|png))
+  static_files: www/\1
+  upload: www/(.*\.(bmp|gif|ico|jpeg|jpg|png))
 
 # audio files
 - url: /(.*\.(mid|midi|mp3|wav))
-  static_files: static/\1
-  upload: static/(.*\.(mid|midi|mp3|wav))
+  static_files: www/\1
+  upload: www/(.*\.(mid|midi|mp3|wav))
 
 # windows files
 - url: /(.*\.(doc|exe|ppt|rtf|xls))
-  static_files: static/\1
-  upload: static/(.*\.(doc|exe|ppt|rtf|xls))
+  static_files: www/\1
+  upload: www/(.*\.(doc|exe|ppt|rtf|xls))
 
 # compressed files
 - url: /(.*\.(bz2|gz|rar|tar|tgz|zip))
-  static_files: static/\1
-  upload: static/(.*\.(bz2|gz|rar|tar|tgz|zip))
+  static_files: www/\1
+  upload: www/(.*\.(bz2|gz|rar|tar|tgz|zip))
 
 # index files
 - url: /(.*)/?
-  static_files: static/\1/index.html
-  upload: static/(.*)/index.html
+  static_files: www/\1/index.html
+  upload: www/(.*)/index.html
 
 # site root
 - url: /
-  static_files: static/index.html
-  upload: static/index.html
+  static_files: www/index.html
+  upload: www/index.html
