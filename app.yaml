@@ -1,36 +1,6 @@
 runtime: python37
 
 handlers:
-- url: /$
-  static_files: www/index.html
-  upload: www/index.html
-  secure: always
-  redirect_http_response_code: 301
-
-# Handle folder urls by serving the index.html page inside.
-- url: /(.*)/$
-  static_files: www/\1/index.html
-  upload: www/.*/index.html
-  secure: always
-  redirect_http_response_code: 301
-  
-# Handle no slash?
-- url: /(.*)$
-  static_files: www/\1/index.html
-  upload: www/.*/index.html
-  secure: always
-  redirect_http_response_code: 301
-  
-# Handle all php files
-- url: /(.+.php)
-  script: auto
-  secure: always
-  redirect_http_response_code: 301  
-
-# HF test fun  
-- url: /charlie/hfqdb_rss/.*
-  script: auto
-
 # Handle nearly every other file by just serving it.
 - url: /(.+)
   static_files: www/\1

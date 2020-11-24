@@ -12,15 +12,15 @@
 	text-decoration: underline;
 	font-weight: bold;
 	}
-	
+
 	.maintext{
 	font-family: "Trebuchet MS", Helvetica, sans-serif;
 	color: black;
 	font-size: large;
 	text-align: left;
 	}
-	
-	
+
+
 	#midwindow {
 	background-color: DarkTurquoise  ;
 	left: 10px;
@@ -36,7 +36,7 @@
 	max-width: 1280px;
 	display: none;
 	}
-	
+
 	body{
 	background-color: DodgerBlue  ;
 	left: 0;
@@ -45,48 +45,48 @@
 	bottom: 0;
 	position: absolute;
 	}
-	
+
 	#charlieimg{
 	text-align: left;
 	float: right;
 	margin-left:4px;
 	}
-	
+
 	#copyrighttext{
 	text-align: center;
 	padding: 5px;
 	font-family: "Trebuchet MS", Helvetica, sans-serif;
 	color: black;
 	font-size: small;
-	margin-top: 10px; 
+	margin-top: 10px;
 	}
-	
+
 	#contact{
 	float:left;
 	font-size: xx-large;
 	margin-right: 10px;
 	display: inline;
 	}
-	
-	
+
+
 	</style>
 </head>
 <body>
 
-<div  id="midwindow"> 
+<div  id="midwindow">
 	<div  id="charlieimg">
 		<img title="Charlie with Glass"  src='/images/charlie_glass_300.jpg'>
 	</div>
 	<div style="text-align: center">
 		<heading>Charles Machalow</heading>
 			<div id="contact">
-			<a href="http://www.google.com/recaptcha/mailhide/d?k=01GFOsdWQ-TQo2Ar0GRgmnNQ==&amp;c=ScTMWe6L7h0qf1zX3s1VrDR_wxkLHdONzvYQyjOpky8=" onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\07501GFOsdWQ-TQo2Ar0GRgmnNQ\75\75\46c\75ScTMWe6L7h0qf1zX3s1VrDR_wxkLHdONzvYQyjOpky8\075', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;" title="Reveal this e-mail address" style="text-decoration:none;">&#9993</a>
+			<a href="https://mailhide.io/e/DQjjWLKa" title="Reveal this e-mail address" style="text-decoration:none;">&#9993</a>
 			</div>
 		<p class="maintext">
 		Hi! I'm Charles, but my friends call me Charlie. I graduated with a BS in Computer Science from Rensselaer Polytechnic Institute, after three years of rigorous coursework, in May of 2015. I worked for almost 5 years as a Software Engineer in the Non-volatile Memory Solutions Group at Intel Corporation. Since early 2020, I'm a Senior Site Reliability Engineer on the Offline Data Team at LinkedIn. The coolest thing that I get to do is engineer solutions to fellow engineer's problems.<br><br>
 		Check out my <a href="https://github.com/csm10495/" style="text-decoration:underline;" target="_blank" >GitHub Page</a>!
 		</p>
-		
+
 
 
 </div>
@@ -104,14 +104,14 @@
 			document.getElementById("midwindow").style.marginTop = ((window.innerHeight) / 2)  - (document.getElementById("midwindow").offsetHeight / 1.95)  + 'px';
 		}
 	}
-	
+
 
 	$( document ).ready(function() {
     $("#midwindow").fadeIn(500);
 	});
 
 	document.getElementById("copyrighttext").innerHTML = "&copy " + new Date().getFullYear() + " - Charles Machalow";
-	
+
 	  <!-- Google Analytics Script -->
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
