@@ -1,8 +1,6 @@
 runtime: python37
 
 handlers:
-
-handlers:
 - url: /(.*\.(appcache|manifest))
   mime_type: text/cache-manifest
   static_files: static/\1
