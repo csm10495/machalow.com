@@ -31,6 +31,3 @@ jobs:
         gcloud auth activate-service-account ${{ secrets.GCP_SA_EMAIL }} --key-file=client-secret.json
         gcloud config set project ${{ secrets.PROJECT_ID }}
         gcloud -q app deploy app.yaml --promote
-
-        # Suppose you need a cron task.
-        gcloud -q app deploy cron.yaml
