@@ -1,8 +1,4 @@
-version: 1
 runtime: python37
-api_version: 1
-
-default_expiration: "30d"
 
 handlers:
 - url: /(.*\.(appcache|manifest))
