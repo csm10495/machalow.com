@@ -2,15 +2,14 @@ runtime: python37
 
 handlers:
 
-# Handle folder urls by serving the index.html page inside.
-- url: /(.*)/?$
-  static_files: www/\1/index.html
-  upload: www/.*/index.html
-  secure: always
-
 # Handle nearly every other file by just serving it.
 - url: /(.+)
   static_files: www/\1
   upload: www/(.*)
   secure: always
-  redirect_http_response_code: 301
+
+# Handle folder urls by serving the index.html page inside.
+- url: /(.*)/?$
+  static_files: www/\1/index.html
+  upload: www/.*/index.html
+  secure: always
