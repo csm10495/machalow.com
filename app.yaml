@@ -8,7 +8,7 @@ handlers:
   redirect_http_response_code: 301
 
 # Handle folder urls by serving the index.html page inside.
-- url: /(.*)/$
+- url: /(.*?)/?$
   static_files: www/\1/index.html
   upload: www/.*/index.html
   secure: always
